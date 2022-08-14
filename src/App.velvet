@@ -1,0 +1,19 @@
+<script>
+	import FeedbackForm from './components/FeedbackForm.velvet';
+	import FeedbackList from './components/FeedbackList.velvet';
+</script>
+
+<main>
+	<FeedbackForm />
+	<FeedbackList />
+</main>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		max-width: 600px;
+		margin: 36px auto;
+	}
+</style>

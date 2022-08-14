@@ -1,0 +1,22 @@
+{
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": ">=16.0.0"
+	},
+	"scripts": {
+		"dev": "NODE_ENV=development node ./scripts/dev.js",
+		"build": "NODE_ENV=production node ./scripts/build.js",
+		"publish": "wrangler pages publish dist/"
+	},
+	"dependencies": {
+		"@intrnl/velvet": "^0.3.0"
+	},
+	"devDependencies": {
+		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
+		"@intrnl/esbuild-plugin-velvet": "^0.4.2",
+		"@intrnl/velvet-compiler": "^0.5.1",
+		"esbuild": "^0.14.54",
+		"wrangler": "^2.0.25"
+	}
+}

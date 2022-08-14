@@ -1,0 +1,110 @@
+<script>
+	import ScoreSelector from './ScoreSelector.velvet';
+
+	import { feedbacks, generateUUIDv4 } from '../store/FeedbackStore.js';
+
+	let text = '';
+	let score = null;
+	let error = null;
+
+	function handleSubmit (ev) {
+		ev.preventDefault();
+
+		const trimmed = text.trim();
+
+		if (trimmed.length < 1) {
+			error = 'You need to fill out the feedback message!';
+			return;
+		}
+
+		if (score == null) {
+			error = 'You need to give a score!';
+			return;
+		}
+
+		const item = {
+			id: generateUUIDv4(),
+			message: trimmed,
+			score: score,
+			date: new Date(),
+		};
+
+		feedbacks.update(($feedbacks) => {
+			return [item, ...$feedbacks];
+		});
+
+		text = '';
+		score = null;
+		error = null;
+	}
+</script>
+
+<form @submit={handleSubmit}>
+	<label for='field'>How would you rate our services?</label>
+
+	<ScoreSelector :value={score} />
+
+	<div class='input-group'>
+		<input id='field' type='text' :value={text} placeholder='The service is...' autofocus />
+		<button type='submit'>Add</button>
+	</div>
+
+
+	{#if error}
+		<p class='error'>{error}</p>
+	{/if}
+</form>
+
+<style>
+	form {
+		background-color: #ffffff;
+		padding: 16px;
+		border-radius: 4px;
+	}
+
+	label {
+		font-weight: 600;
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	.input-group {
+		display: flex;
+		gap: 8px;
+		margin-top: 16px;
+	}
+
+	button, input {
+		height: 36px;
+		box-sizing: border-box;
+		outline-width: 2px;
+		outline-color: #d42560;
+	}
+
+	input {
+		flex-grow: 1;
+		padding: 4px 8px;
+		border: 1px solid #989898;
+		border-radius: 4px;
+	}
+
+	button {
+		cursor: pointer;
+		user-select: none;
+		color: #ffffff;
+		background-color: #e25b88;
+		padding: 4px 16px;
+		border: 0;
+		border-radius: 4px;
+		outline-offset: 2px;
+	}
+	button:hover {
+		background-color: rgb(226 91 136 / 80%);
+	}
+
+	.error {
+		font-size: 14px;
+		color: #ed143d;
+		margin: 8px 0 0;
+	}
+</style>

@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"lib": ["dom", "esnext"],
+		"module": "NodeNext",
+		"moduleResolution": "node",
+		"paths": {
+			"~/*": ["./src/*"]
+    }
+	}
+}
