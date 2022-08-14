@@ -66,6 +66,7 @@ export function relformat (node, date) {
 	const loop = () => {
 		if (date == null) {
 			node.textContent = 'N/A';
+			node.removeAttribute('datetime');
 			return;
 		}
 
@@ -80,6 +81,8 @@ export function relformat (node, date) {
 		const text = formatter.format(value, unit);
 
 		node.textContent = text;
+		node.setAttribute('datetime', parsed.toISOString());
+
 		timeout = setTimeout(loop, delay(delta));
 	};
 
