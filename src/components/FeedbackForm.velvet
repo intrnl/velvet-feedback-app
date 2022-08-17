@@ -99,7 +99,7 @@
 		outline-offset: 2px;
 	}
 	button:hover {
-		background-color: rgb(226 91 136 / 80%);
+		background-color: #ea86a7;
 	}
 
 	.error {
