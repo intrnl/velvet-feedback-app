@@ -41,7 +41,7 @@
 			<div class='body'>
 				<div class='header'>
 					<span>rated {item.score}</span>
-					<span>posted <time #use={[relformat, item.date]}></span>
+					<span>posted <time #use={[relformat, item.date]} /></span>
 				</div>
 				<p class='text'>{item.message}</p>
 			</div>
