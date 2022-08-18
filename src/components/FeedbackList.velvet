@@ -2,9 +2,9 @@
 	import { feedbacks } from '../store/FeedbackStore.js';
 	import { relformat } from '../misc/relformatter.js';
 
-	function handleItemDelete (todo) {
+	function handleItemDelete (item) {
 		feedbacks.update(($feedbacks) => {
-			return $feedbacks.filter((item) => item.id !== todo.id);
+			return $feedbacks.filter((x) => x.id !== item.id);
 		});
 	}
 
