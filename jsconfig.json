@@ -1,9 +1,9 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"lib": ["dom", "esnext"],
+		"target": "ESNext",
+		"lib": ["DOM", "ESNext"],
 		"module": "NodeNext",
-		"moduleResolution": "node",
+		"moduleResolution": "NodeNext",
 		"paths": {
 			"~/*": ["./src/*"]
     }
