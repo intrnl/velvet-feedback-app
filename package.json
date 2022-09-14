@@ -10,13 +10,13 @@
 		"publish": "wrangler pages publish dist/"
 	},
 	"dependencies": {
-		"@intrnl/velvet": "^0.3.1"
+		"@intrnl/velvet": "^0.4.4"
 	},
 	"devDependencies": {
 		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
-		"@intrnl/esbuild-plugin-velvet": "^0.4.3",
-		"@intrnl/velvet-compiler": "^0.6.0",
-		"esbuild": "^0.14.54",
-		"wrangler": "^2.0.25"
+		"@intrnl/esbuild-plugin-velvet": "^0.5.2",
+		"@intrnl/velvet-compiler": "^0.7.1",
+		"esbuild": "^0.15.7",
+		"wrangler": "^2.1.3"
 	}
 }

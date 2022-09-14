@@ -29,9 +29,7 @@
 			date: new Date(),
 		};
 
-		feedbacks.update(($feedbacks) => {
-			return [item, ...$feedbacks];
-		});
+		$feedbacks = [item, ...$feedbacks];
 
 		text = '';
 		score = null;

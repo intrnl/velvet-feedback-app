@@ -3,9 +3,7 @@
 	import { relformat } from '../misc/relformatter.js';
 
 	function handleItemDelete (item) {
-		feedbacks.update(($feedbacks) => {
-			return $feedbacks.filter((x) => x.id !== item.id);
-		});
+		$feedbacks = $feedbacks.filter((x) => x.id !== item.id);
 	}
 
 	let average = 0;
