@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/style.css"],
+  "sourcesContent": ["body {\n\tfont-family: sans-serif;\n\tfont-size: 16px;\n\tline-height: 1.5em;\n\tbackground: #202142;\n\tmargin: 0;\n}\n"],
+  "mappings": "AAAA,KACC,uBACA,eACA,kBACA,mBAJD",
+  "names": []
+}
