@@ -10,11 +10,11 @@
 		"publish": "rm -r dist/_assets; pnpm run build; scripts/publish.sh"
 	},
 	"dependencies": {
-		"@intrnl/velvet": "^1.0.0"
+		"@intrnl/velvet": "^1.1.0"
 	},
 	"devDependencies": {
 		"@intrnl/esbuild-plugin-velvet": "^1.0.2",
-		"@intrnl/velvet-compiler": "^1.0.1",
+		"@intrnl/velvet-compiler": "^1.1.0",
 		"esbuild": "^0.19.3"
 	}
 }
